@@ -1,0 +1,6 @@
+<?php
+const TAX_RATE = 0.10;
+const MEMBER_DISCOUNT_RATE = 0.05;
+const FREE_SHIPPING_MIN = 2000000;
+const SHIPPING_FEE = 30000;
+const CURRENCY = "VND";
