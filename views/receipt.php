@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>QuickCheckout</title>
+    <title>SmartCafe Billing</title>
 </head>
 <body>
-    <h1>QuickCheckout Receipt</h1>
+    <h1>SmartCafe Order Receipt</h1>
     <p>Product: <?= $productName ?></p>
+    <p>Unit Price: <?= number_format($unitPrice) ?> <?= CURRENCY ?></p>
     <p>Quantity: <?= $quantity ?></p>
-    <p>Subtotal: <?= $subtotal ?> <?= CURRENCY ?></p>
-    <p>Discount: <?= $discount ?> <?= CURRENCY ?></p>
-    <p>Shipping: <?= $shipping ?> <?= CURRENCY ?></p>
-    <p>Tax: <?= $tax ?> <?= CURRENCY ?></p>
-    <p><strong>Total: <?= $total ?> <?= CURRENCY ?></strong></p>
-    <p>Status: <?= $canCheckout ? "READY TO CHECKOUT" : "BLOCKED" ?></p>
+    <p>Subtotal: <?= number_format($subtotal) ?> <?= CURRENCY ?></p>
+    <p>Discount: <?= number_format($discount) ?> <?= CURRENCY ?></p>
+    <p>Packaging Fee: <?= number_format($packagingFee) ?> <?= CURRENCY ?></p>
+    <p>Service Fee: <?= number_format($serviceFee) ?> <?= CURRENCY ?></p>
+    <p><strong>Total: <?= number_format($total) ?> <?= CURRENCY ?></strong></p>
+    <p>Status: <?= $canOrder ? "READY TO ORDER" : "BLOCKED" ?></p>
 </body>
 </html>
